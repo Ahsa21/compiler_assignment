@@ -7,9 +7,11 @@
 
 /* Required code included before the parser definition begins */
 %code requires{
+
+  
   #include <string>
   #include "Node.h"
-  #define USE_LEX_ONLY false //change this macro to true if you want to isolate the lexer from the parser.
+  #define USE_LEX_ONLY true //change this macro to true if you want to isolate the lexer from the parser.
 }
 
 /* Code included in the parser implementation file */
@@ -23,7 +25,10 @@
 
 /* Token definitions for the grammar */
 /* Tokens represent the smallest units of the language, like operators and parentheses */
-%token <std::string> PLUSOP MINUSOP MULTOP INT LP RP 
+%token <std::string> PLUSOP MINUSOP MULTOP LP RP CLASS MAIN INT INTTYPE VOLATILE BOOLEAN VOID FLOAT IF ELSE FOR PRINT READ RETURN BREAK CONTINUE LENGTH TRUE FALSE ID NEWLINE ASSIGN LT GT LBRACE RBRACE LBRACKET RBRACKET DOT COMMA NOT AND ASSIGNCOLON OR LE GE NE DIV XOR
+
+
+
 %token END 0 "end of file"
 
 /* Operator precedence and associativity rules */

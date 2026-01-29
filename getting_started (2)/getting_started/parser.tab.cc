@@ -42,7 +42,7 @@
 
 
 // Unqualified %code blocks.
-#line 16 "parser.yy"
+#line 18 "parser.yy"
 
   #define YY_DECL yy::parser::symbol_type yylex()
   YY_DECL;
@@ -199,9 +199,47 @@ namespace yy {
       case symbol_kind::S_PLUSOP: // PLUSOP
       case symbol_kind::S_MINUSOP: // MINUSOP
       case symbol_kind::S_MULTOP: // MULTOP
-      case symbol_kind::S_INT: // INT
       case symbol_kind::S_LP: // LP
       case symbol_kind::S_RP: // RP
+      case symbol_kind::S_CLASS: // CLASS
+      case symbol_kind::S_MAIN: // MAIN
+      case symbol_kind::S_INT: // INT
+      case symbol_kind::S_INTTYPE: // INTTYPE
+      case symbol_kind::S_VOLATILE: // VOLATILE
+      case symbol_kind::S_BOOLEAN: // BOOLEAN
+      case symbol_kind::S_VOID: // VOID
+      case symbol_kind::S_FLOAT: // FLOAT
+      case symbol_kind::S_IF: // IF
+      case symbol_kind::S_ELSE: // ELSE
+      case symbol_kind::S_FOR: // FOR
+      case symbol_kind::S_PRINT: // PRINT
+      case symbol_kind::S_READ: // READ
+      case symbol_kind::S_RETURN: // RETURN
+      case symbol_kind::S_BREAK: // BREAK
+      case symbol_kind::S_CONTINUE: // CONTINUE
+      case symbol_kind::S_LENGTH: // LENGTH
+      case symbol_kind::S_TRUE: // TRUE
+      case symbol_kind::S_FALSE: // FALSE
+      case symbol_kind::S_ID: // ID
+      case symbol_kind::S_NEWLINE: // NEWLINE
+      case symbol_kind::S_ASSIGN: // ASSIGN
+      case symbol_kind::S_LT: // LT
+      case symbol_kind::S_GT: // GT
+      case symbol_kind::S_LBRACE: // LBRACE
+      case symbol_kind::S_RBRACE: // RBRACE
+      case symbol_kind::S_LBRACKET: // LBRACKET
+      case symbol_kind::S_RBRACKET: // RBRACKET
+      case symbol_kind::S_DOT: // DOT
+      case symbol_kind::S_COMMA: // COMMA
+      case symbol_kind::S_NOT: // NOT
+      case symbol_kind::S_AND: // AND
+      case symbol_kind::S_ASSIGNCOLON: // ASSIGNCOLON
+      case symbol_kind::S_OR: // OR
+      case symbol_kind::S_LE: // LE
+      case symbol_kind::S_GE: // GE
+      case symbol_kind::S_NE: // NE
+      case symbol_kind::S_DIV: // DIV
+      case symbol_kind::S_XOR: // XOR
         value.YY_MOVE_OR_COPY< std::string > (YY_MOVE (that.value));
         break;
 
@@ -229,9 +267,47 @@ namespace yy {
       case symbol_kind::S_PLUSOP: // PLUSOP
       case symbol_kind::S_MINUSOP: // MINUSOP
       case symbol_kind::S_MULTOP: // MULTOP
-      case symbol_kind::S_INT: // INT
       case symbol_kind::S_LP: // LP
       case symbol_kind::S_RP: // RP
+      case symbol_kind::S_CLASS: // CLASS
+      case symbol_kind::S_MAIN: // MAIN
+      case symbol_kind::S_INT: // INT
+      case symbol_kind::S_INTTYPE: // INTTYPE
+      case symbol_kind::S_VOLATILE: // VOLATILE
+      case symbol_kind::S_BOOLEAN: // BOOLEAN
+      case symbol_kind::S_VOID: // VOID
+      case symbol_kind::S_FLOAT: // FLOAT
+      case symbol_kind::S_IF: // IF
+      case symbol_kind::S_ELSE: // ELSE
+      case symbol_kind::S_FOR: // FOR
+      case symbol_kind::S_PRINT: // PRINT
+      case symbol_kind::S_READ: // READ
+      case symbol_kind::S_RETURN: // RETURN
+      case symbol_kind::S_BREAK: // BREAK
+      case symbol_kind::S_CONTINUE: // CONTINUE
+      case symbol_kind::S_LENGTH: // LENGTH
+      case symbol_kind::S_TRUE: // TRUE
+      case symbol_kind::S_FALSE: // FALSE
+      case symbol_kind::S_ID: // ID
+      case symbol_kind::S_NEWLINE: // NEWLINE
+      case symbol_kind::S_ASSIGN: // ASSIGN
+      case symbol_kind::S_LT: // LT
+      case symbol_kind::S_GT: // GT
+      case symbol_kind::S_LBRACE: // LBRACE
+      case symbol_kind::S_RBRACE: // RBRACE
+      case symbol_kind::S_LBRACKET: // LBRACKET
+      case symbol_kind::S_RBRACKET: // RBRACKET
+      case symbol_kind::S_DOT: // DOT
+      case symbol_kind::S_COMMA: // COMMA
+      case symbol_kind::S_NOT: // NOT
+      case symbol_kind::S_AND: // AND
+      case symbol_kind::S_ASSIGNCOLON: // ASSIGNCOLON
+      case symbol_kind::S_OR: // OR
+      case symbol_kind::S_LE: // LE
+      case symbol_kind::S_GE: // GE
+      case symbol_kind::S_NE: // NE
+      case symbol_kind::S_DIV: // DIV
+      case symbol_kind::S_XOR: // XOR
         value.move< std::string > (YY_MOVE (that.value));
         break;
 
@@ -259,9 +335,47 @@ namespace yy {
       case symbol_kind::S_PLUSOP: // PLUSOP
       case symbol_kind::S_MINUSOP: // MINUSOP
       case symbol_kind::S_MULTOP: // MULTOP
-      case symbol_kind::S_INT: // INT
       case symbol_kind::S_LP: // LP
       case symbol_kind::S_RP: // RP
+      case symbol_kind::S_CLASS: // CLASS
+      case symbol_kind::S_MAIN: // MAIN
+      case symbol_kind::S_INT: // INT
+      case symbol_kind::S_INTTYPE: // INTTYPE
+      case symbol_kind::S_VOLATILE: // VOLATILE
+      case symbol_kind::S_BOOLEAN: // BOOLEAN
+      case symbol_kind::S_VOID: // VOID
+      case symbol_kind::S_FLOAT: // FLOAT
+      case symbol_kind::S_IF: // IF
+      case symbol_kind::S_ELSE: // ELSE
+      case symbol_kind::S_FOR: // FOR
+      case symbol_kind::S_PRINT: // PRINT
+      case symbol_kind::S_READ: // READ
+      case symbol_kind::S_RETURN: // RETURN
+      case symbol_kind::S_BREAK: // BREAK
+      case symbol_kind::S_CONTINUE: // CONTINUE
+      case symbol_kind::S_LENGTH: // LENGTH
+      case symbol_kind::S_TRUE: // TRUE
+      case symbol_kind::S_FALSE: // FALSE
+      case symbol_kind::S_ID: // ID
+      case symbol_kind::S_NEWLINE: // NEWLINE
+      case symbol_kind::S_ASSIGN: // ASSIGN
+      case symbol_kind::S_LT: // LT
+      case symbol_kind::S_GT: // GT
+      case symbol_kind::S_LBRACE: // LBRACE
+      case symbol_kind::S_RBRACE: // RBRACE
+      case symbol_kind::S_LBRACKET: // LBRACKET
+      case symbol_kind::S_RBRACKET: // RBRACKET
+      case symbol_kind::S_DOT: // DOT
+      case symbol_kind::S_COMMA: // COMMA
+      case symbol_kind::S_NOT: // NOT
+      case symbol_kind::S_AND: // AND
+      case symbol_kind::S_ASSIGNCOLON: // ASSIGNCOLON
+      case symbol_kind::S_OR: // OR
+      case symbol_kind::S_LE: // LE
+      case symbol_kind::S_GE: // GE
+      case symbol_kind::S_NE: // NE
+      case symbol_kind::S_DIV: // DIV
+      case symbol_kind::S_XOR: // XOR
         value.copy< std::string > (that.value);
         break;
 
@@ -287,9 +401,47 @@ namespace yy {
       case symbol_kind::S_PLUSOP: // PLUSOP
       case symbol_kind::S_MINUSOP: // MINUSOP
       case symbol_kind::S_MULTOP: // MULTOP
-      case symbol_kind::S_INT: // INT
       case symbol_kind::S_LP: // LP
       case symbol_kind::S_RP: // RP
+      case symbol_kind::S_CLASS: // CLASS
+      case symbol_kind::S_MAIN: // MAIN
+      case symbol_kind::S_INT: // INT
+      case symbol_kind::S_INTTYPE: // INTTYPE
+      case symbol_kind::S_VOLATILE: // VOLATILE
+      case symbol_kind::S_BOOLEAN: // BOOLEAN
+      case symbol_kind::S_VOID: // VOID
+      case symbol_kind::S_FLOAT: // FLOAT
+      case symbol_kind::S_IF: // IF
+      case symbol_kind::S_ELSE: // ELSE
+      case symbol_kind::S_FOR: // FOR
+      case symbol_kind::S_PRINT: // PRINT
+      case symbol_kind::S_READ: // READ
+      case symbol_kind::S_RETURN: // RETURN
+      case symbol_kind::S_BREAK: // BREAK
+      case symbol_kind::S_CONTINUE: // CONTINUE
+      case symbol_kind::S_LENGTH: // LENGTH
+      case symbol_kind::S_TRUE: // TRUE
+      case symbol_kind::S_FALSE: // FALSE
+      case symbol_kind::S_ID: // ID
+      case symbol_kind::S_NEWLINE: // NEWLINE
+      case symbol_kind::S_ASSIGN: // ASSIGN
+      case symbol_kind::S_LT: // LT
+      case symbol_kind::S_GT: // GT
+      case symbol_kind::S_LBRACE: // LBRACE
+      case symbol_kind::S_RBRACE: // RBRACE
+      case symbol_kind::S_LBRACKET: // LBRACKET
+      case symbol_kind::S_RBRACKET: // RBRACKET
+      case symbol_kind::S_DOT: // DOT
+      case symbol_kind::S_COMMA: // COMMA
+      case symbol_kind::S_NOT: // NOT
+      case symbol_kind::S_AND: // AND
+      case symbol_kind::S_ASSIGNCOLON: // ASSIGNCOLON
+      case symbol_kind::S_OR: // OR
+      case symbol_kind::S_LE: // LE
+      case symbol_kind::S_GE: // GE
+      case symbol_kind::S_NE: // NE
+      case symbol_kind::S_DIV: // DIV
+      case symbol_kind::S_XOR: // XOR
         value.move< std::string > (that.value);
         break;
 
@@ -556,9 +708,47 @@ namespace yy {
       case symbol_kind::S_PLUSOP: // PLUSOP
       case symbol_kind::S_MINUSOP: // MINUSOP
       case symbol_kind::S_MULTOP: // MULTOP
-      case symbol_kind::S_INT: // INT
       case symbol_kind::S_LP: // LP
       case symbol_kind::S_RP: // RP
+      case symbol_kind::S_CLASS: // CLASS
+      case symbol_kind::S_MAIN: // MAIN
+      case symbol_kind::S_INT: // INT
+      case symbol_kind::S_INTTYPE: // INTTYPE
+      case symbol_kind::S_VOLATILE: // VOLATILE
+      case symbol_kind::S_BOOLEAN: // BOOLEAN
+      case symbol_kind::S_VOID: // VOID
+      case symbol_kind::S_FLOAT: // FLOAT
+      case symbol_kind::S_IF: // IF
+      case symbol_kind::S_ELSE: // ELSE
+      case symbol_kind::S_FOR: // FOR
+      case symbol_kind::S_PRINT: // PRINT
+      case symbol_kind::S_READ: // READ
+      case symbol_kind::S_RETURN: // RETURN
+      case symbol_kind::S_BREAK: // BREAK
+      case symbol_kind::S_CONTINUE: // CONTINUE
+      case symbol_kind::S_LENGTH: // LENGTH
+      case symbol_kind::S_TRUE: // TRUE
+      case symbol_kind::S_FALSE: // FALSE
+      case symbol_kind::S_ID: // ID
+      case symbol_kind::S_NEWLINE: // NEWLINE
+      case symbol_kind::S_ASSIGN: // ASSIGN
+      case symbol_kind::S_LT: // LT
+      case symbol_kind::S_GT: // GT
+      case symbol_kind::S_LBRACE: // LBRACE
+      case symbol_kind::S_RBRACE: // RBRACE
+      case symbol_kind::S_LBRACKET: // LBRACKET
+      case symbol_kind::S_RBRACKET: // RBRACKET
+      case symbol_kind::S_DOT: // DOT
+      case symbol_kind::S_COMMA: // COMMA
+      case symbol_kind::S_NOT: // NOT
+      case symbol_kind::S_AND: // AND
+      case symbol_kind::S_ASSIGNCOLON: // ASSIGNCOLON
+      case symbol_kind::S_OR: // OR
+      case symbol_kind::S_LE: // LE
+      case symbol_kind::S_GE: // GE
+      case symbol_kind::S_NE: // NE
+      case symbol_kind::S_DIV: // DIV
+      case symbol_kind::S_XOR: // XOR
         yylhs.value.emplace< std::string > ();
         break;
 
@@ -577,13 +767,13 @@ namespace yy {
           switch (yyn)
             {
   case 2: // root: expression
-#line 41 "parser.yy"
+#line 46 "parser.yy"
                        {root = yystack_[0].value.as < Node * > ();}
-#line 583 "parser.tab.cc"
+#line 773 "parser.tab.cc"
     break;
 
   case 3: // expression: expression PLUSOP expression
-#line 43 "parser.yy"
+#line 48 "parser.yy"
                                          {      /*
                                                   Create a subtree that corresponds to the AddExpression
                                                   The root of the subtree is AddExpression
@@ -594,51 +784,51 @@ namespace yy {
                             yylhs.value.as < Node * > ()->children.push_back(yystack_[0].value.as < Node * > ());
                             /* printf("r1 "); */
                           }
-#line 598 "parser.tab.cc"
+#line 788 "parser.tab.cc"
     break;
 
   case 4: // expression: expression MINUSOP expression
-#line 53 "parser.yy"
+#line 58 "parser.yy"
                                             {
                             yylhs.value.as < Node * > () = new Node("SubExpression", "", yylineno);
                             yylhs.value.as < Node * > ()->children.push_back(yystack_[2].value.as < Node * > ());
                             yylhs.value.as < Node * > ()->children.push_back(yystack_[0].value.as < Node * > ());
                             /* printf("r2 "); */
                           }
-#line 609 "parser.tab.cc"
+#line 799 "parser.tab.cc"
     break;
 
   case 5: // expression: expression MULTOP expression
-#line 59 "parser.yy"
+#line 64 "parser.yy"
                                            {
                             yylhs.value.as < Node * > () = new Node("MultExpression", "", yylineno);
                             yylhs.value.as < Node * > ()->children.push_back(yystack_[2].value.as < Node * > ());
                             yylhs.value.as < Node * > ()->children.push_back(yystack_[0].value.as < Node * > ());
                             /* printf("r3 "); */
                           }
-#line 620 "parser.tab.cc"
+#line 810 "parser.tab.cc"
     break;
 
   case 6: // expression: factor
-#line 65 "parser.yy"
+#line 70 "parser.yy"
                           {yylhs.value.as < Node * > () = yystack_[0].value.as < Node * > (); /* printf("r4 ");*/}
-#line 626 "parser.tab.cc"
+#line 816 "parser.tab.cc"
     break;
 
   case 7: // factor: INT
-#line 68 "parser.yy"
+#line 73 "parser.yy"
                           {  yylhs.value.as < Node * > () = new Node("Int", yystack_[0].value.as < std::string > (), yylineno); /* printf("r5 ");  Here we create a leaf node Int. The value of the leaf node is $1 */}
-#line 632 "parser.tab.cc"
+#line 822 "parser.tab.cc"
     break;
 
   case 8: // factor: LP expression RP
-#line 69 "parser.yy"
+#line 74 "parser.yy"
                                { yylhs.value.as < Node * > () = yystack_[1].value.as < Node * > (); /* printf("r6 ");  simply return the expression */}
-#line 638 "parser.tab.cc"
+#line 828 "parser.tab.cc"
     break;
 
 
-#line 642 "parser.tab.cc"
+#line 832 "parser.tab.cc"
 
             default:
               break;
@@ -993,21 +1183,21 @@ namespace yy {
   const signed char
   parser::yypact_[] =
   {
-       9,    -3,     9,     1,    -1,    -3,     6,    -3,     9,     9,
-       9,    -3,     0,     0,    -3
+       0,     0,    -3,     4,     8,    -3,    -2,    -3,     0,     0,
+       0,    -3,     9,     9,    -3
   };
 
   const signed char
   parser::yydefact_[] =
   {
-       0,     7,     0,     0,     2,     6,     0,     1,     0,     0,
+       0,     0,     7,     0,     2,     6,     0,     1,     0,     0,
        0,     8,     3,     4,     5
   };
 
   const signed char
   parser::yypgoto_[] =
   {
-      -3,    -3,    -2,    -3
+      -3,    -3,    -1,    -3
   };
 
   const signed char
@@ -1019,28 +1209,28 @@ namespace yy {
   const signed char
   parser::yytable_[] =
   {
-       6,     7,     8,     9,    10,    10,    12,    13,    14,     8,
-       9,    10,     0,     0,    11,     1,     2
+       6,     8,     9,    10,     7,    11,     1,    12,    13,    14,
+       2,     8,     9,    10,    10
   };
 
   const signed char
   parser::yycheck_[] =
   {
-       2,     0,     3,     4,     5,     5,     8,     9,    10,     3,
-       4,     5,    -1,    -1,     8,     6,     7
+       1,     3,     4,     5,     0,     7,     6,     8,     9,    10,
+      10,     3,     4,     5,     5
   };
 
   const signed char
   parser::yystos_[] =
   {
-       0,     6,     7,    10,    11,    12,    11,     0,     3,     4,
-       5,     8,    11,    11,    11
+       0,     6,    10,    48,    49,    50,    49,     0,     3,     4,
+       5,     7,    49,    49,    49
   };
 
   const signed char
   parser::yyr1_[] =
   {
-       0,     9,    10,    11,    11,    11,    11,    12,    12
+       0,    47,    48,    49,    49,    49,    49,    50,    50
   };
 
   const signed char
@@ -1057,7 +1247,12 @@ namespace yy {
   const parser::yytname_[] =
   {
   "\"end of file\"", "error", "\"invalid token\"", "PLUSOP", "MINUSOP",
-  "MULTOP", "INT", "LP", "RP", "$accept", "root", "expression", "factor", YY_NULLPTR
+  "MULTOP", "LP", "RP", "CLASS", "MAIN", "INT", "INTTYPE", "VOLATILE",
+  "BOOLEAN", "VOID", "FLOAT", "IF", "ELSE", "FOR", "PRINT", "READ",
+  "RETURN", "BREAK", "CONTINUE", "LENGTH", "TRUE", "FALSE", "ID",
+  "NEWLINE", "ASSIGN", "LT", "GT", "LBRACE", "RBRACE", "LBRACKET",
+  "RBRACKET", "DOT", "COMMA", "NOT", "AND", "ASSIGNCOLON", "OR", "LE",
+  "GE", "NE", "DIV", "XOR", "$accept", "root", "expression", "factor", YY_NULLPTR
   };
 #endif
 
@@ -1066,7 +1261,7 @@ namespace yy {
   const signed char
   parser::yyrline_[] =
   {
-       0,    41,    41,    43,    53,    59,    65,    68,    69
+       0,    46,    46,    48,    58,    64,    70,    73,    74
   };
 
   void
@@ -1098,5 +1293,5 @@ namespace yy {
 
 
 } // yy
-#line 1102 "parser.tab.cc"
+#line 1297 "parser.tab.cc"
 

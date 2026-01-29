@@ -6,7 +6,7 @@
 }
 %option yylineno noyywrap nounput batch noinput stack 
 %%
-%%
+
 "class"                 {if(USE_LEX_ONLY) {printf("CLASS ");} else {return yy::parser::make_CLASS(yytext);}}
 "main"                  {if(USE_LEX_ONLY) {printf("MAIN ");} else {return yy::parser::make_MAIN(yytext);}}
 "int"                   {if(USE_LEX_ONLY) {printf("INTTYPE ");} else {return yy::parser::make_INTTYPE(yytext);}}
@@ -25,7 +25,6 @@
 "length"                {if(USE_LEX_ONLY) {printf("LENGTH ");} else {return yy::parser::make_LENGTH(yytext);}}
 "true"                  {if(USE_LEX_ONLY) {printf("TRUE ");} else {return yy::parser::make_TRUE(yytext);}}
 "false"                 {if(USE_LEX_ONLY) {printf("FALSE ");} else {return yy::parser::make_FALSE(yytext);}}
-"EOF"                   {if(USE_LEX_ONLY) {printf("EOF ");} else {return yy::parser::make_EOF(yytext);}}
 "ID"                    {if(USE_LEX_ONLY) {printf("ID ");} else {return yy::parser::make_ID(yytext);}}
 "/n"                    {if(USE_LEX_ONLY) {printf("NEWLINE ");} else {return yy::parser::make_NEWLINE(yytext);}}
 
@@ -55,12 +54,11 @@
 "/"                     {if(USE_LEX_ONLY) {printf("DIV ");} else {return yy::parser::make_DIV(yytext);}}
 "^"                     {if(USE_LEX_ONLY) {printf("XOR ");} else {return yy::parser::make_XOR(yytext);}}
 
+
 0|[1-9][0-9]*           {if(USE_LEX_ONLY) {printf("INT ");} else {return yy::parser::make_INT(yytext);}}
 
 [ \t\n\r]+              {}
 "//"[^\n]*              {}
-.                       { if(!lexical_errors) fprintf(stderr, "Lexical errors found! See the logs below: \n");
-                          fprintf(stderr,"\t@error at line %d. Character %s is not recognized\n", yylineno, yytext);
-                          lexical_errors = 1;}
-<<EOF>>                 {return yy::parser::make_END();}
+.                       { if(!lexical_errors) fprintf(stderr, "Lexical errors found! See the logs below: \n"); fprintf(stderr,"\t@error at line %d. Character %s is not recognized\n", yylineno, yytext); lexical_errors = 1;}
+<<EOF>>                  {return yy::parser::make_END();}
 %%

@@ -1,10 +1,10 @@
 class QS {
 
-  volatile int[] number
-  volatile int size
+  volatile number : int[]
+  volatile size : int
 
   Start(sz : int): int {
-    volatile int aux
+    volatile aux : int
 
     aux := Init(sz)
     aux := Print()
@@ -18,13 +18,13 @@ class QS {
   }
 
   Sort(left : int, right : int): int {
-    volatile int v
-    volatile int i
-    volatile int j
-    volatile int t
-    volatile boolean cont1
-    volatile boolean cont2
-    volatile int aux
+    volatile v : int
+    volatile i : int
+    volatile j : int
+    volatile t : int
+    volatile cont1 : boolean
+    volatile cont2 : boolean
+    volatile aux : int
 
     if (left < right) {
       v := number[right]
@@ -63,7 +63,7 @@ class QS {
   }
 
   Print(): int {
-    volatile int j
+    volatile j : int
     j := 0
 
     while (j < size) {
@@ -83,8 +83,8 @@ class QS {
 }
 
 main(): int {
-  volatile QS qs := QS()
-  volatile int r := qs.Start(10)
+  volatile qs : QS := QS()
+  volatile r : int := qs.Start(10)
   print(r)
   return 0
 }
