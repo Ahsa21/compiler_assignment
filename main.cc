@@ -1,5 +1,6 @@
 #include <iostream>
 #include "parser.tab.hh"
+#include "SemanticAnalyzer.h"
 
 extern Node *root;
 extern FILE *yyin;
@@ -63,12 +64,20 @@ int main(int argc, char **argv)
 			{
 				root->print_tree();
 				root->generate_tree();
+				SemanticAnalyzer sem;
+
+				sem.build(root);      // build symbol table
+				sem.table.print();    // print symbol table
+
+				sem.check(root);      // run semantic analysis
 			}
 			catch (...)
 			{
 				errCode = errCodes::AST_ERROR;
 			}
 		}
+
+
 	}
 
 	return errCode;

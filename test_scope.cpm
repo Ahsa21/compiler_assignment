@@ -1,0 +1,7 @@
+{
+  volatile x : int
+
+  {
+    volatile x : float
+  }
+}

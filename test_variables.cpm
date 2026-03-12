@@ -1,0 +1,5 @@
+{
+  volatile a : int
+  volatile b : float
+  volatile c : boolean
+}
