@@ -1,0 +1,6 @@
+digraph SymbolTable {
+  rankdir=TB;
+  node [shape=record fontname="Helvetica"];
+
+  scope0 [label="{Scope 0|MyClass : class (class)|a : int (field)|classtest : class (class)|main : int (method)|swFunc : int (method)|x : int (field)|xyFunc : int (method)|xyz : MyClass (field)|xzFunc : int (method)|y : boolean (field)|yxFunc : boolean (method)|yzFunc : boolean (method)|z : int (field)|zxFunc : int (method)|zyFunc : int (method)}"];
+}
